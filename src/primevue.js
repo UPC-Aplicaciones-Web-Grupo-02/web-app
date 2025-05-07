@@ -12,6 +12,6 @@ export default (app) => {
     }
   });
 
-  app.component('pv-Button', Button);
-  app.component('pv-Card', Card);
+  app.component('pv-button', Button);
+  app.component('pv-card', Card);
 }
