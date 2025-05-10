@@ -1,4 +1,4 @@
-import {BaseService} from "@/shared/base.service.js"
+import {BaseService} from "@/shared/base.services.js"
 
 export class Db {
   signIn(email, password) {

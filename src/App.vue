@@ -1,5 +1,5 @@
 <script setup>
-import maindev from './layouts/main-layout.component.vue'
+import maindev from './movix/profiles/components/login.components.vue'
 </script>
 
 <template>

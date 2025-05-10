@@ -44,9 +44,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
+  height: 90vh;
   width: 250px;
-  border-right: 3px solid #16ac72;
+  border-right: 3px solid #419828;
   background: #fff;
   padding: 0 0 20px 0;
 }

@@ -1,10 +1,24 @@
 {
-  "compilerOptions": {
-    "target": "es2016",
-    "module": "commonjs",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "skipLibCheck": true
-  }
+  "user": [
+    {
+      "id": "e5170280-5e1a-4310-80ba-1f1b57772f3a",
+      "email": "velarde@gmail.com",
+      "password": "velarde123",
+      "completeName": "Nestor Hernán",
+      "phone": "9876543221",
+      "dni": "12345678",
+      "photo": "https://i.ibb.co/8rdm6xC/Logo-Movi-Tech.png",
+      "address": "Los Olivos"
+    }
+  ],
+  "user_roles": [
+    {
+      "id": "1",
+      "role": "Owner"
+    },
+    {
+      "id": "2",
+      "role": "User"
+    }
+  ]
 }
