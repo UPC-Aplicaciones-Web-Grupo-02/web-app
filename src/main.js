@@ -3,7 +3,7 @@ import App from './App.vue'
 import PrimeVue from './primevue.js'
 import 'primeicons/primeicons.css'
 import 'primeflex/primeflex.css';
-import router from './routes/routes.js'
+import router from './routes/route.js'
 
 import Button from 'primevue/button'
 import Card from 'primevue/card'
