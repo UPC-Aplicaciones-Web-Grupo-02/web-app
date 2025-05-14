@@ -3,5 +3,6 @@ import maindev from './movix/profiles/components/login.components.vue'
 </script>
 
 <template>
-  <maindev/>
+  <router-view></router-view>
 </template>
+
