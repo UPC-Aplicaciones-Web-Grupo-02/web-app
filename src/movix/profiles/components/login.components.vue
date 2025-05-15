@@ -37,28 +37,6 @@
 </template>
 
 <script setup>
-import {Db} from '@/movix/profiles/services/users.services.js'
-//import router from '@/router.js'
-import {ref} from 'vue';
 
-let email = ref(null);
-let password = ref(null);
-
-const signIn = async () => {
-  try {
-    const response = await Db.signIn(email.value, password.value);
-
-    if (response.data && response.data.length > 0) {
-      alert("Sign In Success");
-      sessionStorage.setItem("user", JSON.stringify(response.data[0]));
-      router.push("/https://github.com/UPC-AppWeb-CiberMach/movirent-frontend/blob/main/.eslintrc.cjs");
-    } else {
-      alert("User Not Found");
-    }
-  } catch (error) {
-    console.error("SignIn Error:", error);
-    alert("Error");
-  }
-};
 
 </script>

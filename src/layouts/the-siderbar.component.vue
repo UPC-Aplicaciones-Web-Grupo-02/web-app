@@ -2,7 +2,7 @@
   <aside class="sidebar">
     <div class="sidebar-top">
       <center>
-        <img src="../public/Logo.png" height="80px" alt="Logo de Movix" />
+        <img src="../shared/img/Logo.png" height="80px" alt="Logo de Movix" />
       </center>
       <ul>
         <li>

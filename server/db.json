@@ -1,12 +1,12 @@
 {
-  "user": [
+  "users": [
     {
       "id": "e5170280-5e1a-4310-80ba-1f1b57772f3a",
+      "completeName": "Nestor Hernán",
+      "dni": "12345678",
       "email": "velarde@gmail.com",
       "password": "velarde123",
-      "completeName": "Nestor Hernán",
       "phone": "9876543221",
-      "dni": "12345678",
       "photo": "https://i.ibb.co/8rdm6xC/Logo-Movi-Tech.png",
       "address": "Los Olivos"
     }

@@ -1,7 +1,7 @@
 <script setup>
-import maindev from './movix/profiles/components/login.components.vue'
+import MainLayout from './layouts/main-layout.component.vue'
 </script>
 
 <template>
-  <maindev/>
+  <MainLayout />
 </template>
