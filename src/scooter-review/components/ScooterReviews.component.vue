@@ -1,12 +1,12 @@
 <template>
   <div class="container">
-    <h2 class="title">Reseñas</h2>
+    <h2 class="title">Review</h2>
 
     <div class="content">
 
       <div class="image-section">
         <img :src="scooter.image" alt="Scooter" class="scooter-image" />
-        <p class="note">Recuerda siempre ser respetuoso con los comentarios y opiniones</p>
+        <p class="note">Always remember to be respectful with comments and opinions</p>
       </div>
 
 
@@ -21,8 +21,8 @@
 
 
     <div class="button-group">
-      <pv-button label="Comentar" icon="pi pi-comment" class="comment-button" />
-      <pv-button label="Regresar" icon="pi pi-arrow-left" class="return-button" @click="goBack" />
+      <pv-button label="Comment" icon="pi pi-comment" class="comment-button" />
+      <pv-button label="Go Back" icon="pi pi-arrow-left" class="return-button" @click="goBack" />
     </div>
   </div>
 </template>
