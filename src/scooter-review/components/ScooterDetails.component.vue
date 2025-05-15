@@ -59,7 +59,7 @@ import PvInputText from 'primevue/inputtext';
 import PvInputNumber from 'primevue/inputnumber';
 import PvButton from 'primevue/button';
 import scooterService from '../services/scooter.service';
-import router from "../../routes/routes.js";
+import router from "@/routes/route.js";
 
 
 const route = useRoute();
