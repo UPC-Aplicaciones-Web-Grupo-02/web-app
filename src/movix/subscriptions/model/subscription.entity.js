@@ -1,8 +1,8 @@
 export class SubscriptionPlan {
-  constructor(id, name, description, price, stars) {
+  constructor(id, nameKey, descriptionKey, price, stars) {
     this.id = id
-    this.name = name
-    this.description = description
+    this.name = nameKey
+    this.description = descriptionKey
     this.price = price
     this.stars = stars
   }
@@ -11,22 +11,22 @@ export class SubscriptionPlan {
 export const PLANS = [
   new SubscriptionPlan(
     'monthly',
-    'Plan Mensual',
-    'Plan con acceso a 7 días de la semana. 100% garantizado los scooters.',
+    'subscription.plans.monthly',
+    'subscription.plans.monthlyDescription',
     39,
     1
   ),
   new SubscriptionPlan(
     'quarterly',
-    'Plan Trimestral',
-    'Plan con acceso a 30 días continuos con beneficios de retiro preferencial.',
+    'subscription.plans.quarterly',
+    'subscription.plans.quarterlyDescription',
     99,
     3
   ),
   new SubscriptionPlan(
     'yearly',
-    'Plan Anual',
-    'Plan con acceso con todos los beneficios durante 1 año.',
+    'subscription.plans.yearly',
+    'subscription.plans.yearlyDescription',
     179,
     5
   )

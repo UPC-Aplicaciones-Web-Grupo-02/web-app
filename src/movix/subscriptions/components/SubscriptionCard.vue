@@ -1,12 +1,14 @@
 <template>
-  <div class="card">
-    <h3>{{ plan.name }}</h3>
-    <p>{{ plan.description }}</p>
+  <div class="card" role="listitem">
+    <h3>{{ $t(plan.name) }}</h3>
+    <p>{{ $t(plan.description) }}</p>
     <p><strong>S/. {{ plan.price }}</strong></p>
     <p>
       <span v-for="n in plan.stars" :key="n">⭐</span>
     </p>
-    <button class="subscribe-btn" @click="$emit('subscribe', plan)">Suscribirte</button>
+    <button class="subscribe-btn" @click="$emit('subscribe', plan)">
+      {{ $t('modal.pay') }}
+    </button>
   </div>
 </template>
 

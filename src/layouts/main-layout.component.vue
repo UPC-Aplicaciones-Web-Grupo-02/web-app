@@ -2,10 +2,12 @@
   <div class="layout">
     <div class="main-content">
       <the-sidebar />
+
       <main class="content">
         <router-view></router-view>
       </main>
     </div>
+
     <the-footer />
   </div>
 </template>
@@ -31,5 +33,20 @@ import TheSidebar from './the-siderbar.component.vue'
 .content {
   flex: 1;
   padding: 20px;
+}
+
+/* Selector de idioma */
+.language-switcher {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 0.5rem;
+}
+
+.language-switcher select {
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
 }
 </style>

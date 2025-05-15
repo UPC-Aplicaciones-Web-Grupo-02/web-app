@@ -1,18 +1,18 @@
 <template>
   <aside class="sidebar">
     <div class="sidebar-top">
-      <center>
+      <div style="text-align: center;">
         <img src="../public/Logo.png" height="80px" alt="Logo de Movix" />
-      </center>
+      </div>
       <ul>
         <li>
-          <RouterLink to="/">
+          <RouterLink to="/Profile">
             <pv-button label="Profile" icon="pi pi-user" />
           </RouterLink>
         </li>
         <li>
-          <RouterLink to="/ruta2">
-            <pv-button label="Opción 2" icon="pi pi-user" />
+          <RouterLink to="/suscripciones">
+            <pv-button label="Mi suscripción" icon="pi pi-user" />
           </RouterLink>
         </li>
         <li>
@@ -27,16 +27,22 @@
         </li>
       </ul>
     </div>
+
     <div class="sidebar-bottom">
+      <select v-model="$i18n.locale" aria-label="Language Switcher">
+        <option value="en">EN</option>
+        <option value="es">ES</option>
+      </select>
+
       <RouterLink to="/logout">
-        <pv-button label="Out Log" icon="pi pi-user" />
+        <pv-button label="Out Log" icon="pi pi-sign-out" />
       </RouterLink>
     </div>
   </aside>
 </template>
 
 <script setup>
-
+// Nada que importar, $i18n está global por main.js 😄
 </script>
 
 <style scoped>
@@ -70,7 +76,15 @@
 
 .sidebar-bottom {
   display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.sidebar-bottom select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
 }
 </style>

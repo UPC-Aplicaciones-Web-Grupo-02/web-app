@@ -1,27 +1,30 @@
 <template>
-  <div v-if="visible" class="overlay">
+  <div v-if="visible" class="overlay" role="dialog" aria-modal="true" aria-labelledby="payment-title">
     <div class="modal">
-      <h3>Medio de pago</h3>
-      <p>Recuerda poner los datos reales o el pago será denegado</p>
+      <h3 id="payment-title">{{ $t('modal.successTitle') }}</h3>
+      <p>{{ $t('modal.successDescription') }}</p>
+
       <form @submit.prevent="handlePay">
-        <input placeholder="Número de tarjeta" required />
-        <input placeholder="Fecha de vencimiento" required />
-        <input placeholder="Números posteriores" required />
-        <input placeholder="Cuenta destino" required />
-        <p>Total a pagar: <strong>S/. {{ plan.price }}</strong></p>
-        <button class="green" type="submit">Pagar</button>
-        <button class="red" type="button" @click="$emit('close')">Cancelar</button>
+        <input :placeholder="$t('form.cardNumber')" required />
+        <input :placeholder="$t('form.expiration')" required />
+        <input :placeholder="$t('form.cvv')" required />
+        <input :placeholder="$t('form.account')" required />
+
+        <p>{{ $t('form.totalToPay') }}: <strong>S/. {{ plan.price }}</strong></p>
+
+        <button class="green" type="submit">{{ $t('modal.pay') }}</button>
+        <button class="red" type="button" @click="$emit('close')">{{ $t('modal.cancel') }}</button>
       </form>
     </div>
   </div>
 </template>
 
 <script setup>
-defineProps(['visible', 'plan'])
+const props = defineProps(['visible', 'plan'])
 const emit = defineEmits(['close', 'paid'])
 
 function handlePay() {
-  emit('paid', plan)
+  emit('paid', props.plan)
 }
 </script>
 
