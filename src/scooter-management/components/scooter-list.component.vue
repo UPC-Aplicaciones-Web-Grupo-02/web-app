@@ -39,7 +39,15 @@ export default {
         console.error('Error adding scooter', error);
       }
     }
-    return { scooters, updateScooter, addScooter };
+    async function deleteScooter(id) {
+      try {
+        await scooterApiService.deleteScooter(id);
+        scooters.value = scooters.value.filter(s => s.id !== id);
+      } catch (error) {
+        console.error('Error eliminando scooter', error);
+      }
+    }
+    return { scooters, updateScooter, addScooter, deleteScooter };
   }
 }
 </script>
@@ -47,7 +55,7 @@ export default {
 <template>
   <div class="grid grid-nogutter justify-content-center">
     <div v-for="scooter in scooters" :key="scooter.id" class="col-12 md:col-4 flex justify-content-center">
-      <scooter-item :scooter="scooter" @update-scooter="updateScooter" />
+      <scooter-item :scooter="scooter" @update-scooter="updateScooter" @delete-scooter="deleteScooter" />
     </div>
     <div class="col-12 md:col-4 flex justify-content-center">
       <scooter-add @add-scooter="addScooter" />
