@@ -5,40 +5,41 @@
       <div class="left-section">
         <img :src="scooter.image" class="scooter-img" alt="Scooter" />
         <p class="note-text">
-          Recuerda siempre llevar tu dni<br />
-          para identificarte con el dueño<br />
-          antes de recoger el scooter
+          Always remember to bring your <br />
+          ID to identify yourself to <br />
+          the owner before picking <br />
+          up the scooter.
         </p>
         <pv-button label="Reseñas" severity="danger" @click="goToReviews(scooter.id)" class="mb-4" />
         <div class="hours-input">
-          <label>Horas a alquilar:</label>
+          <label>Hours to rent:</label>
           <pv-input-number v-model="form.duration" class="hours-field" />
         </div>
       </div>
 
       <div class="right-section">
         <div class="info-group" v-if="scooter.name">
-          <label>Nombre:</label>
+          <label>Name:</label>
           <pv-input-text :value="scooter.name" disabled />
         </div>
         <div class="info-group">
-          <label>Marca:</label>
+          <label>Brand:</label>
           <pv-input-text :value="scooter.brand" disabled />
         </div>
         <div class="info-group">
-          <label>Modelo:</label>
+          <label>Model:</label>
           <pv-input-text :value="scooter.model" disabled />
         </div>
         <div class="info-group">
-          <label>Precio x hora:</label>
+          <label>Price per hour:</label>
           <pv-input-text :value="'S/. ' + scooter.price" disabled />
         </div>
         <div class="info-group">
-          <label>Dirección:</label>
+          <label>Adress:</label>
           <pv-input-text :value="scooter.region" disabled />
         </div>
         <div class="info-group">
-          <label>Contacto:</label>
+          <label>Contact:</label>
           <pv-input-text :value="scooter.contact" disabled />
         </div>
       </div>
