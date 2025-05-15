@@ -9,7 +9,7 @@
           para identificarte con el dueño<br />
           antes de recoger el scooter
         </p>
-        <pv-button label="Reseñas" severity="danger" class="mb-4" />
+        <pv-button label="Reseñas" severity="danger" @click="goToReviews(scooter.id)" class="mb-4" />
         <div class="hours-input">
           <label>Horas a alquilar:</label>
           <pv-input-number v-model="form.duration" class="hours-field" />
@@ -45,8 +45,8 @@
     </div>
 
     <div class="button-group">
-      <pv-button label="Alquilar" severity="success" class="action-btn" />
-      <pv-button label="Regresar" severity="danger" outlined class="action-btn" />
+      <pv-button label="Rent" severity="success" class="action-btn" />
+      <pv-button label="Go Back" severity="danger" outlined class="action-btn" @click="goBack"/>
     </div>
   </div>
 </template>
@@ -58,12 +58,19 @@ import PvInputText from 'primevue/inputtext';
 import PvInputNumber from 'primevue/inputnumber';
 import PvButton from 'primevue/button';
 import scooterService from '../services/scooter.service';
-
+import router from "../../routes/routes.js";
 
 
 const route = useRoute();
 const scooter = ref({});
 const form = ref({ duration: 0 });
+
+const goToReviews = (id) => {
+  router.push({ name: 'ScooterReviews', params: { id } });
+};
+const goBack = () => {
+  router.back()
+}
 
 onMounted(async () => {
   if (route.params.id) {
