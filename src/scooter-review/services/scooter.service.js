@@ -24,7 +24,7 @@ export default {
     },
 
     async getReviews(id) {
-        const response = await axios.get(`${API_URL}/${id}/reviews`);
+        const response = await axios.get(`${API_URL}?reviews=${reviews}`);
         return response.data;
     }
 };
