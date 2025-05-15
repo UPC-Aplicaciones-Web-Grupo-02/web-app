@@ -10,6 +10,7 @@ import DetailsScooter from "@/movix/scooter-view/component/scooterDatails.compon
 import createScooter from "@/movix/scooter-view/component/createScooter.component.vue"
 import SubscriptionsPage from '@/movix/subscriptions/views/SubscriptionsPage.vue'
 import SubscriptionCurrent from '@/movix/subscriptions/components/SubscriptionCurrent.vue'
+
 import Main from "@/layouts/components/movixMain.component.vue";
 
 const routes = [
@@ -20,11 +21,10 @@ const routes = [
     path: '/main', component: Main,
 
     children: [
-      { path: '', redirect: '/suscripciones' },
-      { path: 'profile', component: Profile  },
+      { path: '/profile', component: Profile  },
       {path: '/editor', component: UserEditor},
-      { path: 'suscripciones', component: SubscriptionsPage },
-      { path: 'mi-suscripcion', component: SubscriptionCurrent },
+      { path: '/suscripciones', component: SubscriptionsPage },
+      { path: '/mi-suscripcion', component: SubscriptionCurrent },
       {path: '/scooter', component: ListScooterComponent},
       {path: '/detalle', component: DetailsScooter},
       {path: '/create', component: createScooter}

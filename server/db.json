@@ -114,7 +114,8 @@
       "user_id": "cc0b24e6-d0cc-4d62-bcc5-cc9e7172cef8"
     }
   ],
-  "subscriptions": [
+  
+  "suscriptions": [
     {
       "id": "1",
       "name": "Plan Mensual",
@@ -165,5 +166,3 @@
       "price": 179,
       "stars": 5
     }
-  ]
-}
