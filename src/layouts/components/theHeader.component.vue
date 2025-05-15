@@ -23,7 +23,7 @@
             <router-link to="/suscriptions" class="pv-btn" aria-label="Suscripción">
               <pv-button :label="$t('buttons.subscription')" icon="pi pi-credit-card" style="background-color: white; color: black; border: none"/>
             </router-link>
-            <router-link to="/ScooterList" class="pv-btn" aria-label="Scooter">
+            <router-link to="/scooter" class="pv-btn" aria-label="Scooter">
               <pv-button :label="$t('buttons.scooter')" icon="pi pi-shop" style="background-color: white; color: black; border: none"/>
             </router-link>
             <router-link to="/login" @click="logout" class="pv-btn" aria-label="Logout">
@@ -96,7 +96,7 @@
 
 <script setup>
 import { useI18n } from "vue-i18n";
-import router from "../../../../web-appv23/src/routes/routes.js";
+import router from "@/routes/routes.js";
 import { ref } from "vue";
 
 const { locale } = useI18n();

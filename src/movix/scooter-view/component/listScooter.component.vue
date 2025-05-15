@@ -42,7 +42,7 @@ const viewDetails = (scooterId) => {
 };
 
 const createNewScooter = () => {
-  router.push('/CreateScooter');
+  router.push('/create');
 };
 
 const searchScooter = () => {

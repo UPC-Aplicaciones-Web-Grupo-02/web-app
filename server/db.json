@@ -23,24 +23,48 @@
   ],
   "scooters": [
     {
-      "id": "604aa948-c9d6-4301-9989-a809947f1752",
-      "name": "scooter 4",
-      "brand": "BMX",
-      "model": "BMX",
-      "image": "https://i.ibb.co/8rdm6xC/Logo-Movi-Tech.png",
-      "price_per_hour": 45,
-      "district": "Los Olivos",
-      "phone": "777777777"
+      "id": "1",
+      "name": "Scooter A",
+      "brand": "Xiaomi",
+      "model": "M365",
+      "pricePerHour": 12,
+      "address": "Av. Larco 123",
+      "contact": "999888777",
+      "region": "Miraflores",
+      "image": "https://www.powerplanetonline.com/cdnassets/patinete_xiaomi_mi_electric_scooter_m365_pro_negro_01_l.jpg"
     },
     {
-      "id": "b166c162-d63e-443f-8def-beead52f5c1c",
-      "name": "scooter promax",
-      "brand": "Rider",
-      "model": "Rider",
-      "image": "https://i.ibb.co/8rdm6xC/Logo-Movi-Tech.png",
-      "price_per_hour": 1022222,
-      "district": "Barranco",
-      "phone": "88888888833"
+      "id": "2",
+      "name": "Scooter B",
+      "brand": "Segway",
+      "model": "Ninebot",
+      "pricePerHour": 15,
+      "address": "Av. Benavides 456",
+      "contact": "998877665",
+      "region": "Miraflores",
+      "image": "https://www.electrickicks.com.au/cdn/shop/files/Segway-Ninebot-MAX-G2-side.jpg?v=1730250007"
+    },
+    {
+      "id": "3",
+      "name": "Scooter C",
+      "brand": "Xiaomi",
+      "model": "Pro 2",
+      "pricePerHour": 10,
+      "address": "Calle Berlin 101",
+      "contact": "987654321",
+      "region": "Miraflores",
+      "image": "https://m.media-amazon.com/images/I/61L5V26vRnL.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Scooter D",
+      "brand": "EcoRide",
+      "model": "Urban X",
+      "pricePerHour": 14,
+      "address": "Av. Caminos del Inca 505",
+      "contact": "912345678",
+      "region": "San Isidro",
+      "image": "https://prizmastore.pe/wp-content/uploads/2023/11/Xiaomi-4-Ultra-4.jpg"
     }
   ],
   "reservations": [],
