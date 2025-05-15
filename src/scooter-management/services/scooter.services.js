@@ -10,10 +10,12 @@ export class ScooterApiService {
   }
 
   updateScooter(id, data) {
-    // Asegúrate de que id es numérico
     return http.put(`/scooters/${Number(id)}`, data);
   }
   createScooter(data) {
     return http.post('/scooters', data);
+  }
+  deleteScooter(id) {
+    return http.delete(`/scooters/${id}`);
   }
 }
