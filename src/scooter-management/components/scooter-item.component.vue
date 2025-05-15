@@ -1,5 +1,4 @@
 <script>
-import { Scooter } from "../model/scooter.entity.js";
 import { ref } from "vue";
 
 export default {
@@ -46,7 +45,7 @@ export default {
 <template>
   <pv-card class="m-2">
     <template #header>
-      <img :src="scooter.image" v-if="!isEditing" />
+      <img :src="scooter.image" v-if="!isEditing" class="scooter-img"/>
     </template>
     <template #title>
       <p v-if="!isEditing">Name: {{ scooter.name }}</p>
@@ -60,7 +59,7 @@ export default {
     </template>
     <template #content>
       <div v-if="!isEditing">
-        <p>Price: {{ scooter.price }}</p>
+        <p>Price: {{ scooter.pricePerHour }}</p>
         <p>Direction: {{ scooter.direction }}</p>
         <p>Contact: {{ scooter.contact }}</p>
       </div>
@@ -101,4 +100,10 @@ export default {
 </template>
 
 <style scoped>
+.scooter-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
 </style>
