@@ -41,7 +41,7 @@
     </div>
 
     <div class="bottom-button">
-      <pv-button label="Ver mis Scooters" severity="success" class="main-button" />
+      <pv-button label="See my Scooters" severity="success" class="main-button" />
     </div>
   </div>
 </template>
