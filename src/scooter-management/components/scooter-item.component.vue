@@ -1,21 +1,20 @@
 <script>
 import { Scooter } from "../model/scooter.entity.js";
 import { ref } from "vue";
-import {InputText as PvInputtext} from "primevue";
 
 export default {
   name: "scooter-item",
-  components: {PvInputtext},
   props: {
     scooter: {
-      type: Scooter,
+      type: Object,
       required: true
     }
   },
-  emits: ["update-scooter"],
+  emits: ["update-scooter", "delete-scooter"],
   setup(props, { emit }) {
     const isEditing = ref(false);
     const edited = ref({ ...props.scooter });
+    const showDeleteDialog = ref(false);
 
     function startEdit() {
       isEditing.value = true;
@@ -28,7 +27,18 @@ export default {
       emit("update-scooter", edited.value);
       isEditing.value = false;
     }
-    return { isEditing, edited, startEdit, cancelEdit, saveEdit };
+    function confirmDelete() {
+      console.log("Abriendo diálogo de confirmación");
+      showDeleteDialog.value = true;
+    }
+    function deleteScooter() {
+      emit("delete-scooter", props.scooter.id);
+      showDeleteDialog.value = false;
+    }
+    function cancelDelete() {
+      showDeleteDialog.value = false;
+    }
+    return { isEditing, edited, startEdit, cancelEdit, saveEdit, showDeleteDialog, confirmDelete, deleteScooter, cancelDelete };
   }
 }
 </script>
@@ -54,7 +64,7 @@ export default {
         <p>Direction: {{ scooter.direction }}</p>
         <p>Contact: {{ scooter.contact }}</p>
       </div>
-      <div v-else class="flex flex-column gap-2" >
+      <div v-else class="flex flex-column gap-2">
         <label>Nombre</label>
         <pv-inputtext v-model="edited.name" class="p-inputtext" />
         <label>Marca</label>
@@ -68,15 +78,25 @@ export default {
       </div>
     </template>
     <template #footer>
-      <div v-if="!isEditing">
+      <div v-if="!isEditing" class="flex gap-2 align-items-center">
         <p>Detail: {{ scooter.detail }}</p>
-        <button class="p-button p-component mt-2" @click="startEdit">Editar</button>
+        <pv-button class="p-button p-component mt-2" @click="startEdit">Editar</pv-button>
+        <pv-button class="p-button p-button-danger p-component mt-2" @click="confirmDelete">
+          <i class="pi pi-trash"></i>
+        </pv-button>
       </div>
       <div v-else>
-        <button class="p-button p-component mr-2" @click="saveEdit">Guardar</button>
-        <button class="p-button p-component p-button-secondary" @click="cancelEdit">Cancelar</button>
+        <pv-button class="p-button p-component mr-2" @click="saveEdit">Guardar</pv-button>
+        <pv-button class="p-button p-component p-button-secondary" @click="cancelEdit">Cancelar</pv-button>
       </div>
     </template>
+    <pv-dialog v-model:visible="showDeleteDialog" header="Confirmar eliminación" :modal="true" :closable="false">
+      <span>¿Seguro que deseas eliminar este scooter?</span>
+      <template>
+        <pv-button class="p-button p-button-danger mr-2" @click="deleteScooter">Eliminar</pv-button>
+        <pv-button class="p-button p-button-secondary" @click="cancelDelete">Cancelar</pv-button>
+      </template>
+    </pv-dialog>
   </pv-card>
 </template>
 
