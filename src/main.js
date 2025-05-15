@@ -6,7 +6,8 @@ import Aura from '@primeuix/themes/aura';
 import 'primeicons/primeicons.css'
 import 'primeflex/primeflex.css';
 
-import {Button, Card, Toolbar, InputText, InputNumber} from "primevue";
+import {Button, Card, Toolbar, InputText, InputNumber, Dialog} from "primevue";
+
 
 const app = createApp(App);
 app
@@ -16,5 +17,6 @@ app
   .component('pv-toolbar', Toolbar)
   .component('pv-inputtext', InputText)
   .component('pv-inputnumber', InputNumber)
+  .component('pv-dialog', Dialog)
   .mount('#app')
 
