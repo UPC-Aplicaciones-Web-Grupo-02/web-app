@@ -20,5 +20,40 @@
       "id": "2",
       "role": "User"
     }
+  ],
+  "scooters": [
+    {
+      "id": 1,
+      "name": "Scooter 1",
+      "brand": "Xiaomi",
+      "model": "Modelo 123",
+      "price": 2.5,
+      "direction": "Los Olivos 123",
+      "contact": "999-999-999",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8BP275ljFujlUdDbgmTdF3cMvpWRKvp567g&s",
+      "detail": "Detalle adicional"
+    },
+    {
+      "id": 2,
+      "name": "Scooter 2",
+      "brand": "Xiaomi",
+      "model": "Modelo 123",
+      "price": 2.5,
+      "direction": "Los Olivos 123",
+      "contact": "999-999-999",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8BP275ljFujlUdDbgmTdF3cMvpWRKvp567g&s",
+      "detail": "Detalle adicional"
+    },
+    {
+      "id": 3,
+      "name": "Scooter 3",
+      "brand": "Xiaomi",
+      "model": "Modelo 123",
+      "price": 2.5,
+      "direction": "Los Olivos 123",
+      "contact": "999-999-999",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8BP275ljFujlUdDbgmTdF3cMvpWRKvp567g&s",
+      "detail": "Detalle adicional"
+    }
   ]
 }
