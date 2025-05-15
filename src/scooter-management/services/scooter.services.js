@@ -13,4 +13,7 @@ export class ScooterApiService {
     // Asegúrate de que id es numérico
     return http.put(`/scooters/${Number(id)}`, data);
   }
+  createScooter(data) {
+    return http.post('/scooters', data);
+  }
 }
