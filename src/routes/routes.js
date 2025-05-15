@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import RegisterForm from "../../../miteresitaolivera/src/movix/profile-management/component/registerUser.component.vue";
-import LoginForm from "../../../miteresitaolivera/src/movix/profile-management/component/loginUser.component.vue";
-import UserEditor from "../../../miteresitaolivera/src/movix/profile-management/component/editorUser.component.vue";
-import Profile from "../../../miteresitaolivera/src/movix/profile-management/component/viewUser.component.vue";
-import NotFound from "../../../miteresitaolivera/src/shared/components/notFound.component.vue";
-import Main from "../../../miteresitaolivera/src/layouts/components/movixMain.component.vue";
+import RegisterForm from "@/movix/profile-management/component/registerUser.component.vue";
+import LoginForm from "@/movix/profile-management/component/loginUser.component.vue";
+import UserEditor from "@/movix/profile-management/component/editorUser.component.vue";
+import Profile from "@/movix/profile-management/component/viewUser.component.vue";
+import NotFound from "@/shared/components/notFound.component.vue";
+import Main from "@/layouts/components/movixMain.component.vue";
 
 const routes = [
   { path: "/", component: LoginForm },

@@ -132,7 +132,7 @@
 <script setup>
 import { Db } from "@/movix/profile-management/services/user.service.js";
 import { v4 as uuidv4 } from 'uuid';
-import router from "../../../../../web-appv23/src/routes/routes.js";
+import router from "@/routes/routes.js";
 import { ref, reactive } from 'vue';
 import { useVuelidate } from '@vuelidate/core';
 import { required, minLength, email as emailValidator } from '@vuelidate/validators';

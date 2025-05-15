@@ -1,4 +1,4 @@
-import { BaseService } from "../../../../../miteresitaolivera/src/shared/base.service.js";
+import { BaseService } from "@/shared/base.service.js";
 
 export class Db {
   async signIn(email, password) {
