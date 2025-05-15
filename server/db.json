@@ -20,5 +20,190 @@
       "id": "2",
       "role": "User"
     }
+  ],
+  "subscriptions": [
+    {
+      "id": "1",
+      "name": "Plan Mensual",
+      "price": 39,
+      "description": "Acceso 7 días a la semana. Garantizado.",
+      "stars": 1
+    },
+    {
+      "id": "2",
+      "name": "Plan Trimestral",
+      "price": 99,
+      "description": "Acceso 30 días continuos. Retiro preferencial.",
+      "stars": 3
+    },
+    {
+      "id": "3",
+      "name": "Plan Anual",
+      "price": 179,
+      "description": "Acceso durante todo el año. Todos los beneficios.",
+      "stars": 5
+    }
+  ],
+  "userSubscription": [
+    {
+      "id": "1",
+      "planId": 1,
+      "userId": 101,
+      "active": true
+    },
+    {
+      "id": "monthly",
+      "name": "subscription.plans.monthly",
+      "description": "subscription.plans.monthlyDescription",
+      "price": 39,
+      "stars": 1
+    },
+    {
+      "id": "quarterly",
+      "name": "subscription.plans.quarterly",
+      "description": "subscription.plans.quarterlyDescription",
+      "price": 99,
+      "stars": 3
+    },
+    {
+      "id": "quarterly",
+      "name": "subscription.plans.quarterly",
+      "description": "subscription.plans.quarterlyDescription",
+      "price": 99,
+      "stars": 3
+    },
+    {
+      "id": "monthly",
+      "name": "subscription.plans.monthly",
+      "description": "subscription.plans.monthlyDescription",
+      "price": 39,
+      "stars": 1
+    },
+    {
+      "id": "quarterly",
+      "name": "subscription.plans.quarterly",
+      "description": "subscription.plans.quarterlyDescription",
+      "price": 99,
+      "stars": 3
+    },
+    {
+      "id": "quarterly",
+      "name": "subscription.plans.quarterly",
+      "description": "subscription.plans.quarterlyDescription",
+      "price": 99,
+      "stars": 3
+    },
+    {
+      "id": "quarterly",
+      "name": "subscription.plans.quarterly",
+      "description": "subscription.plans.quarterlyDescription",
+      "price": 99,
+      "stars": 3
+    },
+    {
+      "id": "quarterly",
+      "name": "subscription.plans.quarterly",
+      "description": "subscription.plans.quarterlyDescription",
+      "price": 99,
+      "stars": 3
+    },
+    {
+      "id": "monthly",
+      "name": "subscription.plans.monthly",
+      "description": "subscription.plans.monthlyDescription",
+      "price": 39,
+      "stars": 1
+    },
+    {
+      "id": "quarterly",
+      "name": "subscription.plans.quarterly",
+      "description": "subscription.plans.quarterlyDescription",
+      "price": 99,
+      "stars": 3
+    },
+    {
+      "id": "monthly",
+      "name": "subscription.plans.monthly",
+      "description": "subscription.plans.monthlyDescription",
+      "price": 39,
+      "stars": 1
+    },
+    {
+      "id": "monthly",
+      "name": "subscription.plans.monthly",
+      "description": "subscription.plans.monthlyDescription",
+      "price": 39,
+      "stars": 1
+    },
+    {
+      "id": "yearly",
+      "name": "subscription.plans.yearly",
+      "description": "subscription.plans.yearlyDescription",
+      "price": 179,
+      "stars": 5
+    },
+    {
+      "id": "quarterly",
+      "name": "subscription.plans.quarterly",
+      "description": "subscription.plans.quarterlyDescription",
+      "price": 99,
+      "stars": 3
+    },
+    {
+      "id": "quarterly",
+      "name": "subscription.plans.quarterly",
+      "description": "subscription.plans.quarterlyDescription",
+      "price": 99,
+      "stars": 3
+    },
+    {
+      "id": "quarterly",
+      "name": "subscription.plans.quarterly",
+      "description": "subscription.plans.quarterlyDescription",
+      "price": 99,
+      "stars": 3
+    },
+    {
+      "id": "yearly",
+      "name": "subscription.plans.yearly",
+      "description": "subscription.plans.yearlyDescription",
+      "price": 179,
+      "stars": 5
+    },
+    {
+      "id": "quarterly",
+      "name": "subscription.plans.quarterly",
+      "description": "subscription.plans.quarterlyDescription",
+      "price": 99,
+      "stars": 3
+    },
+    {
+      "id": "quarterly",
+      "name": "subscription.plans.quarterly",
+      "description": "subscription.plans.quarterlyDescription",
+      "price": 99,
+      "stars": 3
+    },
+    {
+      "id": "monthly",
+      "name": "subscription.plans.monthly",
+      "description": "subscription.plans.monthlyDescription",
+      "price": 39,
+      "stars": 1
+    },
+    {
+      "id": "quarterly",
+      "name": "subscription.plans.quarterly",
+      "description": "subscription.plans.quarterlyDescription",
+      "price": 99,
+      "stars": 3
+    },
+    {
+      "id": "yearly",
+      "name": "subscription.plans.yearly",
+      "description": "subscription.plans.yearlyDescription",
+      "price": 179,
+      "stars": 5
+    }
   ]
 }
