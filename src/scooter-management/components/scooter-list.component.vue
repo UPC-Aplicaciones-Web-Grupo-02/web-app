@@ -20,14 +20,26 @@ export default {
         console.error('Error when looking for scooters', error);
       }
     });
-    return {scooters};
+    async function updateScooter(updated) {
+      try {
+        await scooterApiService.updateScooter(updated.id, updated);
+        const idx = scooters.value.findIndex(s => s.id === updated.id);
+        if (idx !== -1) scooters.value[idx] = { ...updated };
+      } catch (error) {
+        console.error('Error updating scooter', error);
+      }
+    }
+
+    return { scooters, updateScooter };
   }
 }
 </script>
 
 <template>
-  <div>
-    <scooter-item v-for="scooter in scooters" :key="scooter.id" :scooter="scooter"></scooter-item>
+  <div class="grid grid-nogutter justify-content-center">
+    <div v-for="scooter in scooters" :key="scooter.id" class="col-12 md:col-4 flex justify-content-center">
+      <scooter-item :scooter="scooter" @update-scooter="updateScooter" />
+    </div>
   </div>
 </template>
 
