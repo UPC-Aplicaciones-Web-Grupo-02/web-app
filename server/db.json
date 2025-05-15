@@ -1,10 +1,10 @@
 {
-  "user": [
+  "users": [
     {
       "id": "e5170280-5e1a-4310-80ba-1f1b57772f3a",
       "email": "velarde@gmail.com",
       "password": "velarde123",
-      "completeName": "Nestor Hernán",
+      "completeName": "Nestor Hernán Panda",
       "phone": "9876543221",
       "dni": "12345678",
       "photo": "https://i.ibb.co/8rdm6xC/Logo-Movi-Tech.png",
@@ -21,27 +21,120 @@
       "role": "User"
     }
   ],
+  "scooters": [
+    {
+      "id": "1",
+      "name": "Scooter A",
+      "brand": "Xiaomi",
+      "model": "M365",
+      "pricePerHour": 12,
+      "address": "Av. Larco 123",
+      "contact": "999888777",
+      "region": "Miraflores",
+      "image": "https://www.powerplanetonline.com/cdnassets/patinete_xiaomi_mi_electric_scooter_m365_pro_negro_01_l.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Scooter B",
+      "brand": "Segway",
+      "model": "Ninebot",
+      "pricePerHour": 15,
+      "address": "Av. Benavides 456",
+      "contact": "998877665",
+      "region": "Miraflores",
+      "image": "https://www.electrickicks.com.au/cdn/shop/files/Segway-Ninebot-MAX-G2-side.jpg?v=1730250007"
+    },
+    {
+      "id": "3",
+      "name": "Scooter C",
+      "brand": "Xiaomi",
+      "model": "Pro 2",
+      "pricePerHour": 10,
+      "address": "Calle Berlin 101",
+      "contact": "987654321",
+      "region": "Miraflores",
+      "image": "https://m.media-amazon.com/images/I/61L5V26vRnL.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Scooter D",
+      "brand": "EcoRide",
+      "model": "Urban X",
+      "pricePerHour": 14,
+      "address": "Av. Caminos del Inca 505",
+      "contact": "912345678",
+      "region": "San Isidro",
+      "image": "https://prizmastore.pe/wp-content/uploads/2023/11/Xiaomi-4-Ultra-4.jpg"
+    }
+  ],
+  "reservations": [],
+  "reviews": [
+    {
+      "id": "1",
+      "comment": "Excelente scooter, muy cómodo.",
+      "star_numb": 5,
+      "client_id": "cc0b24e6-d0cc-4d62-bcc5-cc9e7172cef8",
+      "scooter_id": 1
+    },
+    {
+      "id": "2",
+      "comment": "Buen servicio, pero el scooter era algo lento.",
+      "star_numb": 3,
+      "client_id": "cc0b24e6-d0cc-4d62-bcc5-cc9e7172cef8",
+      "scooter_id": 2
+    },
+    {
+      "id": "3",
+      "comment": "Muy buen scooter, me gustó mucho.",
+      "star_numb": 5,
+      "client_id": "cc0b24e6-d0cc-4d62-bcc5-cc9e7172cef8",
+      "scooter_id": 1
+    },
+    {
+      "id": "4",
+      "comment": "Prueba api 123123",
+      "star_numb": 5,
+      "client_id": "cc0b24e6-d0cc-4d62-bcc5-cc9e7172cef8",
+      "scooter_id": 1
+    }
+  ],
+  "payments": [
+    {
+      "id": "1",
+      "number": 123456789012,
+      "date": "2024-09-15",
+      "three_back_num": 123,
+      "user_id": "cc0b24e6-d0cc-4d62-bcc5-cc9e7172cef8"
+    },
+    {
+      "id": "2",
+      "number": 987654321012,
+      "date": "2024-09-16",
+      "three_back_num": 456,
+      "user_id": "cc0b24e6-d0cc-4d62-bcc5-cc9e7172cef8"
+    }
+  ],
   "subscriptions": [
     {
       "id": "1",
       "name": "Plan Mensual",
-      "price": 39,
-      "description": "Acceso 7 días a la semana. Garantizado.",
-      "stars": 1
+      "description": "Plan con acceso a 7 días de la semana 100% garantizado durante 1 mes",
+      "stars": 1,
+      "price": 39
     },
     {
       "id": "2",
       "name": "Plan Trimestral",
-      "price": 99,
-      "description": "Acceso 30 días continuos. Retiro preferencial.",
-      "stars": 3
+      "description": "Plan con acceso a 90 días. Cuenta con beneficio de rentar scooter deportivos.",
+      "stars": 2,
+      "price": 99
     },
     {
       "id": "3",
       "name": "Plan Anual",
-      "price": 179,
-      "description": "Acceso durante todo el año. Todos los beneficios.",
-      "stars": 5
+      "description": "Plan con acceso con todos los beneficios durante 1 año.",
+      "stars": 3,
+      "price": 199
     }
   ],
   "userSubscription": [
@@ -50,139 +143,6 @@
       "planId": 1,
       "userId": 101,
       "active": true
-    },
-    {
-      "id": "monthly",
-      "name": "subscription.plans.monthly",
-      "description": "subscription.plans.monthlyDescription",
-      "price": 39,
-      "stars": 1
-    },
-    {
-      "id": "quarterly",
-      "name": "subscription.plans.quarterly",
-      "description": "subscription.plans.quarterlyDescription",
-      "price": 99,
-      "stars": 3
-    },
-    {
-      "id": "quarterly",
-      "name": "subscription.plans.quarterly",
-      "description": "subscription.plans.quarterlyDescription",
-      "price": 99,
-      "stars": 3
-    },
-    {
-      "id": "monthly",
-      "name": "subscription.plans.monthly",
-      "description": "subscription.plans.monthlyDescription",
-      "price": 39,
-      "stars": 1
-    },
-    {
-      "id": "quarterly",
-      "name": "subscription.plans.quarterly",
-      "description": "subscription.plans.quarterlyDescription",
-      "price": 99,
-      "stars": 3
-    },
-    {
-      "id": "quarterly",
-      "name": "subscription.plans.quarterly",
-      "description": "subscription.plans.quarterlyDescription",
-      "price": 99,
-      "stars": 3
-    },
-    {
-      "id": "quarterly",
-      "name": "subscription.plans.quarterly",
-      "description": "subscription.plans.quarterlyDescription",
-      "price": 99,
-      "stars": 3
-    },
-    {
-      "id": "quarterly",
-      "name": "subscription.plans.quarterly",
-      "description": "subscription.plans.quarterlyDescription",
-      "price": 99,
-      "stars": 3
-    },
-    {
-      "id": "monthly",
-      "name": "subscription.plans.monthly",
-      "description": "subscription.plans.monthlyDescription",
-      "price": 39,
-      "stars": 1
-    },
-    {
-      "id": "quarterly",
-      "name": "subscription.plans.quarterly",
-      "description": "subscription.plans.quarterlyDescription",
-      "price": 99,
-      "stars": 3
-    },
-    {
-      "id": "monthly",
-      "name": "subscription.plans.monthly",
-      "description": "subscription.plans.monthlyDescription",
-      "price": 39,
-      "stars": 1
-    },
-    {
-      "id": "monthly",
-      "name": "subscription.plans.monthly",
-      "description": "subscription.plans.monthlyDescription",
-      "price": 39,
-      "stars": 1
-    },
-    {
-      "id": "yearly",
-      "name": "subscription.plans.yearly",
-      "description": "subscription.plans.yearlyDescription",
-      "price": 179,
-      "stars": 5
-    },
-    {
-      "id": "quarterly",
-      "name": "subscription.plans.quarterly",
-      "description": "subscription.plans.quarterlyDescription",
-      "price": 99,
-      "stars": 3
-    },
-    {
-      "id": "quarterly",
-      "name": "subscription.plans.quarterly",
-      "description": "subscription.plans.quarterlyDescription",
-      "price": 99,
-      "stars": 3
-    },
-    {
-      "id": "quarterly",
-      "name": "subscription.plans.quarterly",
-      "description": "subscription.plans.quarterlyDescription",
-      "price": 99,
-      "stars": 3
-    },
-    {
-      "id": "yearly",
-      "name": "subscription.plans.yearly",
-      "description": "subscription.plans.yearlyDescription",
-      "price": 179,
-      "stars": 5
-    },
-    {
-      "id": "quarterly",
-      "name": "subscription.plans.quarterly",
-      "description": "subscription.plans.quarterlyDescription",
-      "price": 99,
-      "stars": 3
-    },
-    {
-      "id": "quarterly",
-      "name": "subscription.plans.quarterly",
-      "description": "subscription.plans.quarterlyDescription",
-      "price": 99,
-      "stars": 3
     },
     {
       "id": "monthly",
