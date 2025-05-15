@@ -1,9 +1,13 @@
 <script setup>
-import maindev from './movix/profiles/components/login.components.vue'
+import TheSidebar from './layouts/the-siderbar.component.vue'
+import TheFoother from './layouts/the-foother.component.vue'
 </script>
 
 <template>
-  <maindev></maindev>
+  <div>
+  <the-sidebar></the-sidebar>
   <router-view></router-view>
+  <div>
+  <the-foother></the-foother>
 </template>
 
