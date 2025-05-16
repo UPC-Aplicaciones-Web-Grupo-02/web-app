@@ -23,7 +23,7 @@ const routes = [
     children: [
       { path: '/profile', component: Profile  },
       {path: '/editor', component: UserEditor},
-      { path: '/suscripciones', component: SubscriptionsPage },
+      { path: '/suscriptions', component: SubscriptionsPage },
       { path: '/mi-suscripcion', component: SubscriptionCurrent },
       {path: '/scooter', component: ListScooterComponent},
       {path: '/detalle', component: DetailsScooter},
