@@ -3,7 +3,7 @@
 import ScooterItem from "./scooter-item.component.vue";
 import ScooterAdd from "./scooter-add.component.vue";
 import {onMounted, ref} from "vue";
-import {ScooterApiService} from "../services/scooter.services";
+import {ScooterApiService} from "../services/scooter.services.js";
 
 
 export default {
