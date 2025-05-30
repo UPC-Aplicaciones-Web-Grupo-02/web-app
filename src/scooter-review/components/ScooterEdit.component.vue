@@ -3,12 +3,11 @@
     <h2 class="text-center text-2xl font-bold mb-5">Detalle del Scooter</h2>
 
     <div class="grid">
-     
+
       <div class="col-12 md:col-6 mb-4">
         <img :src="scooter.image" class="w-full h-18rem object-contain border rounded" alt="Scooter" />
       </div>
 
-     
       <div class="col-12 md:col-6">
         <p><strong>Nombre:</strong> {{ scooter.name }}</p>
         <p><strong>Marca:</strong> {{ scooter.brand }}</p>
@@ -18,7 +17,6 @@
         <p><strong>Contacto:</strong> {{ scooter.contact }}</p>
         <p><strong>Región:</strong> {{ scooter.region }}</p>
 
-        <!-- Alquiler -->
         <div class="mt-4">
           <pv-inputNumber
               v-model="hours"
