@@ -5,9 +5,9 @@ import LoginForm from "@/movix/profile-management/component/loginUser.component.
 import UserEditor from "@/movix/profile-management/component/editorUser.component.vue";
 import Profile from "@/movix/profile-management/component/viewUser.component.vue";
 import NotFound from "@/shared/components/notFound.component.vue";
-import ListScooterComponent from "@/movix/scooter-view/component/listScooter.component.vue";
-import DetailsScooter from "@/movix/scooter-view/component/scooterDatails.component.vue";
-import createScooter from "@/movix/scooter-view/component/createScooter.component.vue"
+import AddScooter from "@/movix/scooter-management/components/scooter-add.component.vue";
+import viewScooter from "@/movix/scooter-management/components/scooter-item.component.vue";
+import listScooter from "@/movix/scooter-management/components/scooter-list.component.vue"
 
 
 import Main from "@/layouts/components/movixMain.component.vue";
@@ -22,9 +22,9 @@ const routes = [
     children: [
       { path: '/profile', component: Profile },
       {path: '/editor', component: UserEditor},
-      {path: '/scooter', component: ListScooterComponent},
-      {path: '/detalle', component: DetailsScooter},
-      {path: '/create', component: createScooter}
+      {path: '/scooter', component: AddScooter},
+      {path: '/detalle', component: viewScooter},
+      {path: '/create', component: listScooter}
     ]
   },
   { path: '/:pathMatch(.*)*', name:'NotFound', component: NotFound }
