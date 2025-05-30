@@ -48,7 +48,7 @@
 
 <script setup>
 import { ref, onMounted, watch } from 'vue';
-import scooterService from '../services/scooter.service';
+import scooterService from '@/movix/scooter-review/services/scooter.service.js';
 import { useRouter } from 'vue-router';
 import PvSelect from 'primevue/select'
 import PvButton from 'primevue/button';

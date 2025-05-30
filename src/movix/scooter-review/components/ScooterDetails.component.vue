@@ -58,8 +58,8 @@ import { useRoute } from 'vue-router';
 import PvInputText from 'primevue/inputtext';
 import PvInputNumber from 'primevue/inputnumber';
 import PvButton from 'primevue/button';
-import scooterService from '../services/scooter.service';
-import router from "@/routes/route.js";
+import scooterService from '@/movix/scooter-review/services/scooter.service.js';
+import router from "@/routes/routes.js";
 
 
 const route = useRoute();

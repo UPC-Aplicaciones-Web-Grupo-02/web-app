@@ -30,7 +30,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import scooterService from '../services/scooter.service'
+import scooterService from '@/movix/scooter-review/services/scooter.service.js'
 
 const route = useRoute()
 const router = useRouter()

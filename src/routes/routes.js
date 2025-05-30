@@ -13,6 +13,11 @@ import listScooter from "@/movix/scooter-management/components/scooter-list.comp
 import ScooterHistoryComponent from "@/movix/ScooterHistory/components/page.component.vue";
 import ScooterDetails from  "@/movix/ScooterHistory/components/scooter-details.components.vue";
 
+// Rafael
+import ScooterDetailss from '@/movix/scooter-review/components/ScooterDetails.component.vue';
+import ScooterEdit from '@/movix/scooter-review/components/ScooterEdit.component.vue';
+import ScooterReviews from '@/movix/scooter-review/components/ScooterReviews.component.vue';
+import ScooterList from '@/movix/scooter-review/components/ScooterList.component.vue';
 
 import Main from "@/layouts/components/movixMain.component.vue";
 
@@ -31,8 +36,12 @@ const routes = [
       { path: '/scooter', component: AddScooter},
       { path: '/detalle', component: viewScooter},
       { path: '/create', component: listScooter},
-      { path: '/history', name:'ScooterHistoryComponent', component: ScooterHistoryComponent },
-      { path: '/details', name:'ScooterDetails', component: ScooterDetails },
+      { path: '/history', component: ScooterHistoryComponent },
+      { path: '/details', component: ScooterDetails },
+      { path: '/scooters', component: ScooterList },
+      { path: '/scooters/:id', component: ScooterDetailss },
+      { path: '/scooters/:id/edit', component: ScooterEdit },
+      { path: '/scooters/:id/reviews', component: ScooterReviews },
     ]
   },
   { path: '/:pathMatch(.*)*', name:'NotFound', component: NotFound }
