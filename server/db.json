@@ -69,37 +69,85 @@
       "contact": "912345678",
       "region": "San Isidro",
       "image": "https://prizmastore.pe/wp-content/uploads/2023/11/Xiaomi-4-Ultra-4.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Scooter A",
+      "brand": "Xiaomi",
+      "model": "M365",
+      "pricePerHour": 12,
+      "address": "Av. Larco 123",
+      "contact": "999888777",
+      "region": "Miraflores",
+      "image": "https://www.powerplanetonline.com/cdnassets/patinete_xiaomi_mi_electric_scooter_m365_pro_negro_01_l.jpg"
+    },
+    {
+      "id": "6",
+      "name": "Scooter B",
+      "brand": "Segway",
+      "model": "Ninebot",
+      "pricePerHour": 15,
+      "address": "Av. Benavides 456",
+      "contact": "998877665",
+      "region": "Miraflores",
+      "image": "https://www.electrickicks.com.au/cdn/shop/files/Segway-Ninebot-MAX-G2-side.jpg?v=1730250007"
+    },
+    {
+      "id": "7",
+      "name": "Scooter C",
+      "brand": "Xiaomi",
+      "model": "Pro 2",
+      "pricePerHour": 10,
+      "address": "Calle Berlin 101",
+      "contact": "987654321",
+      "region": "Miraflores",
+      "image": "https://m.media-amazon.com/images/I/61L5V26vRnL.jpg"
+    },
+    {
+      "id": "8",
+      "name": "Scooter D",
+      "brand": "EcoRide",
+      "model": "Urban X",
+      "pricePerHour": 14,
+      "address": "Av. Caminos del Inca 505",
+      "contact": "912345678",
+      "region": "San Isidro",
+      "image": "https://prizmastore.pe/wp-content/uploads/2023/11/Xiaomi-4-Ultra-4.jpg"
     }
   ],
   "reservations": [],
   "reviews": [
     {
-      "id": "1",
-      "comment": "Excelente scooter, muy cómodo.",
-      "star_numb": 5,
-      "client_id": "cc0b24e6-d0cc-4d62-bcc5-cc9e7172cef8",
-      "scooter_id": 1
+      "id": 1,
+      "scooterId": "1",
+      "reviewer": "Random1",
+      "rating": 4,
+      "comment": "Muy buen servicio, el dueño fue muy amable y puntual. El precio fue un poco elevado.",
+      "image": "https://www.powerplanetonline.com/cdnassets/patinete_xiaomi_mi_electric_scooter_m365_pro_negro_01_l.jpg"
     },
     {
-      "id": "2",
-      "comment": "Buen servicio, pero el scooter era algo lento.",
-      "star_numb": 3,
-      "client_id": "cc0b24e6-d0cc-4d62-bcc5-cc9e7172cef8",
-      "scooter_id": 2
+      "id": 2,
+      "scooterId": "1",
+      "reviewer": "Random2",
+      "rating": 3,
+      "comment": "Scooter un poco antiguo para el precio que tiene",
+      "image": "https://www.electrickicks.com.au/cdn/shop/files/Segway-Ninebot-MAX-G2-side.jpg?v=1730250007"
     },
     {
-      "id": "3",
-      "comment": "Muy buen scooter, me gustó mucho.",
-      "star_numb": 5,
-      "client_id": "cc0b24e6-d0cc-4d62-bcc5-cc9e7172cef8",
-      "scooter_id": 1
+      "id": 3,
+      "scooterId": "2",
+      "reviewer": "Random3",
+      "rating": 5,
+      "comment": "Scooter moderno y excelente autonomía.",
+      "image": "https://m.media-amazon.com/images/I/61L5V26vRnL.jpg"
     },
     {
-      "id": "4",
-      "comment": "Prueba api 123123",
-      "star_numb": 5,
-      "client_id": "cc0b24e6-d0cc-4d62-bcc5-cc9e7172cef8",
-      "scooter_id": 1
+      "id": 4,
+      "scooterId": "2",
+      "reviewer": "Random3",
+      "rating": 5,
+      "comment": "Scooter en excelente estado y muy rapido.",
+      "image": "https://prizmastore.pe/wp-content/uploads/2023/11/Xiaomi-4-Ultra-4.jpg"
     }
   ],
   "payments": [
@@ -118,7 +166,6 @@
       "user_id": "cc0b24e6-d0cc-4d62-bcc5-cc9e7172cef8"
     }
   ],
-  
   "suscriptions": [
     {
       "id": "1",
