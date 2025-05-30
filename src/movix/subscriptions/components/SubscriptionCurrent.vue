@@ -71,7 +71,7 @@ async function cancelSub() {
 }
 
 function goToChange() {
-  window.location.href = '/suscripciones'
+  window.location.href = '/scooters'
 }
 </script>
 

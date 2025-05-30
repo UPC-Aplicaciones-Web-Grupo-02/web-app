@@ -74,7 +74,7 @@ watch(selectedRegion, async (newRegion) => {
 });
 
 const goToDetails = (id) => {
-  router.push({ name: 'ScooterDetails', params: { id } });
+  router.push({ name: 'ScooterDetailss', params: { id } });
 };
 </script>
 

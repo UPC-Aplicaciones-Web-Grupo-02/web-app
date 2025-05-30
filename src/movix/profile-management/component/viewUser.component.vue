@@ -6,10 +6,6 @@
 
       <div class="left">
         <img :src="photo" class="profile-img" alt="Imagen de perfil" />
-
-        <router-link to="/editor" class="pv-btn" aria-label="Vista de datos del usuario">
-          <pv-button :label="$t('editar')" style="background-color: white; color: black; border: none"/>
-        </router-link>
       </div>
 
       <div class="right">
@@ -35,6 +31,9 @@
         </div>
       </div>
     </div>
+    <router-link to="/editor" class="pv-btn" aria-label="Vista de datos del usuario">
+      <pv-button :label="$t('Editar perfil')" style="background-color: #55bd37; color: #ffffff; border: none"/>
+    </router-link>
   </div>
 </template>
 

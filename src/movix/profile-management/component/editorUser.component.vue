@@ -208,7 +208,7 @@ async function confirmDeleteUser() {
 }
 
 function verHistorial(){
-  router.push("/ReservationHistory")
+  router.push("/history")
 }
 </script>
 
