@@ -10,7 +10,7 @@ import SubscriptionCurrent from '@/movix/subscriptions/components/SubscriptionCu
 import AddScooter from "@/movix/scooter-management/components/scooter-add.component.vue";
 import viewScooter from "@/movix/scooter-management/components/scooter-item.component.vue";
 import listScooter from "@/movix/scooter-management/components/scooter-list.component.vue"
-import ScooterHistoryComponent from "@/movix/ScooterHistory/components/scooter-history.component.vue";
+import ScooterHistoryComponent from "@/movix/ScooterHistory/components/page.component.vue";
 import ScooterDetails from  "@/movix/ScooterHistory/components/scooter-details.components.vue";
 
 
@@ -30,11 +30,11 @@ const routes = [
       { path: '/mi-suscripcion', component: SubscriptionCurrent },
       { path: '/scooter', component: AddScooter},
       { path: '/detalle', component: viewScooter},
-      { path: '/create', component: listScooter}
+      { path: '/create', component: listScooter},
+      { path: '/history', name:'ScooterHistoryComponent', component: ScooterHistoryComponent },
+      { path: '/details', name:'ScooterDetails', component: ScooterDetails },
     ]
   },
-  { path: '/history', name:'ScooterHistoryComponent', component: ScooterHistoryComponent },
-  { path: '/details', name:'ScooterDetails', component: ScooterDetails },
   { path: '/:pathMatch(.*)*', name:'NotFound', component: NotFound }
 ];
 const router = createRouter({
