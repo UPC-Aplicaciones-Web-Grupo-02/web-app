@@ -14,11 +14,15 @@
   "user_roles": [
     {
       "id": "1",
-      "role": "Owner"
+      "role": "Administrador"
     },
     {
       "id": "2",
-      "role": "User"
+      "role": "Usuario"
+    },
+    {
+      "id": "3",
+      "role": "Universitario"
     }
   ],
   "scooters": [

@@ -49,8 +49,12 @@ const signIn = async () => {
 
   try {
     const response = await db.signIn(email.value, password.value);
+    if (!response || !response.data) {
+      alert("Respuesta inválida del servidor.");
+      return;
+    }
 
-    if (response.data && response.data.length > 0) {
+    if (response.data.length > 0) {
       alert("Satisfactorio");
       const user = response.data[0];
       sessionStorage.setItem("user", JSON.stringify(user));
@@ -59,13 +63,11 @@ const signIn = async () => {
       alert("Usuario o contraseña incorrectos.");
     }
   } catch (err) {
-    console.error(err);
-    alert("Ocurrió un error al iniciar sesión.");
+    console.error("Error en signIn:", err);
+    alert(`Ocurrió un error al iniciar sesión: ${err.message || err}`);
   }
 };
 </script>
-
-
 <style scoped>
 .p-invalid {
   border: 1px solid red !important;
@@ -74,5 +76,4 @@ const signIn = async () => {
 .text-red-500 {
   color: red;
 }
-
 </style>
