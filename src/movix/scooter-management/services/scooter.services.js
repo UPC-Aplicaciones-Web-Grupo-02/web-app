@@ -2,16 +2,16 @@ import { BaseService } from "@/shared/base.service.js";
 
 export class ScooterApiService {
   getScooters() {
-    return BaseService.get('/scooters');
+    return BaseService.http.get('/scooters');
   }
 
   updateScooter(id, data) {
-    return BaseService.put(`/scooters/${Number(id)}`, data);
+    return BaseService.http.put(`/scooters/${Number(id)}`, data);
   }
   createScooter(data) {
-    return BaseService.post('/scooters', data);
+    return BaseService.http.post('/scooters', data);
   }
   deleteScooter(id) {
-    return BaseService.delete(`/scooters/${id}`);
+    return BaseService.http.delete(`/scooters/${id}`);
   }
 }

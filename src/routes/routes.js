@@ -40,9 +40,9 @@ const routes = [
       { path: '/suscriptions', component: SubscriptionsPage },
       { path: '/mi-suscripcion', component: SubscriptionCurrent },
       // Sebastian
-      { path: '/scooter', component: AddScooter},
+      { path: '/scooter', component: listScooter},
       { path: '/detalle', component: viewScooter},
-      { path: '/create', component: listScooter},
+      { path: '/create', component: AddScooter},
       // Alonso
       { path: '/history', component: ScooterHistoryComponent },
       { path: '/details', component: ScooterDetails },
