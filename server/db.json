@@ -1,14 +1,48 @@
 {
   "users": [
     {
-      "id": "e5170280-5e1a-4310-80ba-1f1b57772f3a",
+      "id": "1",
+      "name": "Néstor Velarde",
+      "phone": "987654321",
+      "dni": "87654321",
       "email": "velarde@gmail.com",
-      "password": "velarde123",
-      "completeName": "Nestor Hernán Panda",
-      "phone": "9876543221",
-      "dni": "12345678",
-      "photo": "https://i.ibb.co/0yCncjdK/teres.jpg",
-      "address": "Los Olivos"
+      "password": "654321",
+      "photo": "https://i.ibb.co/8rdm6xC/Logo-Movi-Tech.png",
+      "address": "Av. Metropolitana, Lima",
+      "role_id": "3"
+    },
+    {
+      "id": "83a3",
+      "name": "Lizbeth",
+      "phone": "876543219",
+      "dni": "87654321",
+      "email": "tere@gmail.com",
+      "password": "654321",
+      "photo": "https://i.ibb.co/8rdm6xC/Logo-Movi-Tech.png",
+      "address": "Av. Metropolitana, Lima",
+      "role_id": "1"
+    },
+    {
+      "id": "bf22",
+      "name": "Sebastian ",
+      "phone": "876543217",
+      "dni": "87654321",
+      "email": "codydevops@gmail.com",
+      "password": "654321",
+      "photo": "https://i.ibb.co/8rdm6xC/Logo-Movi-Tech.png",
+      "address": "Av. Honorio Delgado, San Martín De Porres, Lima, Lima.",
+      "role_id": "1"
+    },
+    {
+      "id": "dd51",
+      "name": "Rafael",
+      "phone": "987654321",
+      "dni": "87654321",
+      "email": "rafael@gmail.com",
+      "password": "654321",
+      "photo": "https://i.ibb.co/8rdm6xC/Logo-Movi-Tech.png",
+      "address": "Av. Metropolitana, Lima",
+      "role_id": "3"
     }
   ],
   "user_roles": [
@@ -29,180 +63,151 @@
     {
       "id": "1",
       "name": "Scooter A",
-      "brand": "Xiaomi",
-      "model": "M365",
-      "pricePerHour": 12,
-      "address": "Av. Larco 123",
-      "contact": "999888777",
-      "region": "Miraflores",
+      "brandId": "1",
+      "modelId": "1",
+      "description": "Scooter Xiaomi M365 Pro",
+      "districtId": "1",
       "image": "https://www.powerplanetonline.com/cdnassets/patinete_xiaomi_mi_electric_scooter_m365_pro_negro_01_l.jpg"
     },
     {
       "id": "2",
       "name": "Scooter B",
-      "brand": "Segway",
-      "model": "Ninebot",
-      "pricePerHour": 15,
-      "address": "Av. Benavides 456",
-      "contact": "998877665",
-      "region": "Miraflores",
+      "brandId": "2",
+      "modelId": "2",
+      "description": "Scooter Xiome",
+      "districtId": "1",
       "image": "https://www.electrickicks.com.au/cdn/shop/files/Segway-Ninebot-MAX-G2-side.jpg?v=1730250007"
     },
     {
-      "id": "3",
+      "id": "b8af",
       "name": "Scooter C",
-      "brand": "Xiaomi",
-      "model": "Pro 2",
-      "pricePerHour": 10,
-      "address": "Calle Berlin 101",
-      "contact": "987654321",
-      "region": "Miraflores",
-      "image": "https://m.media-amazon.com/images/I/61L5V26vRnL.jpg"
-    },
-    {
-      "id": "4",
-      "name": "Scooter D",
-      "brand": "EcoRide",
-      "model": "Urban X",
-      "pricePerHour": 14,
-      "address": "Av. Caminos del Inca 505",
-      "contact": "912345678",
-      "region": "San Isidro",
-      "image": "https://prizmastore.pe/wp-content/uploads/2023/11/Xiaomi-4-Ultra-4.jpg"
-    },
-    {
-      "id": "5",
-      "name": "Scooter A",
-      "brand": "Xiaomi",
-      "model": "M365",
-      "pricePerHour": 12,
-      "address": "Av. Larco 123",
-      "contact": "999888777",
-      "region": "Miraflores",
+      "description": "Es una maquina poderosa",
+      "modelId": "2",
+      "brandId": "1",
+      "districtId": "1",
       "image": "https://www.powerplanetonline.com/cdnassets/patinete_xiaomi_mi_electric_scooter_m365_pro_negro_01_l.jpg"
     },
     {
-      "id": "6",
-      "name": "Scooter B",
-      "brand": "Segway",
-      "model": "Ninebot",
-      "pricePerHour": 15,
-      "address": "Av. Benavides 456",
-      "contact": "998877665",
-      "region": "Miraflores",
-      "image": "https://www.electrickicks.com.au/cdn/shop/files/Segway-Ninebot-MAX-G2-side.jpg?v=1730250007"
-    },
-    {
-      "id": "7",
-      "name": "Scooter C",
-      "brand": "Xiaomi",
-      "model": "Pro 2",
-      "pricePerHour": 10,
-      "address": "Calle Berlin 101",
-      "contact": "987654321",
-      "region": "Miraflores",
-      "image": "https://m.media-amazon.com/images/I/61L5V26vRnL.jpg"
-    },
-    {
-      "id": "8",
-      "name": "Scooter D",
-      "brand": "EcoRide",
-      "model": "Urban X",
-      "pricePerHour": 14,
-      "address": "Av. Caminos del Inca 505",
-      "contact": "912345678",
-      "region": "San Isidro",
-      "image": "https://prizmastore.pe/wp-content/uploads/2023/11/Xiaomi-4-Ultra-4.jpg"
-    }
-  ],
-  "reservations": [],
-  "reviews": [
-    {
-      "id": "1",
-      "scooterId": "1",
-      "reviewer": "Random1",
-      "rating": 4,
-      "comment": "Muy buen servicio, el dueño fue muy amable y puntual. El precio fue un poco elevado.",
+      "id": "1b9a",
+      "name": "Scooter Z",
+      "description": "Es un Scooter de la ultima",
+      "modelId": "2",
+      "brandId": "1",
+      "districtId": "1",
       "image": "https://www.powerplanetonline.com/cdnassets/patinete_xiaomi_mi_electric_scooter_m365_pro_negro_01_l.jpg"
-    },
-    {
-      "id": "2",
-      "scooterId": "1",
-      "reviewer": "Random2",
-      "rating": 3,
-      "comment": "Scooter un poco antiguo para el precio que tiene",
-      "image": "https://www.electrickicks.com.au/cdn/shop/files/Segway-Ninebot-MAX-G2-side.jpg?v=1730250007"
-    },
-    {
-      "id": "3",
-      "scooterId": "2",
-      "reviewer": "Random3",
-      "rating": 5,
-      "comment": "Scooter moderno y excelente autonomía.",
-      "image": "https://m.media-amazon.com/images/I/61L5V26vRnL.jpg"
-    },
-    {
-      "id": "4",
-      "scooterId": "2",
-      "reviewer": "Random3",
-      "rating": 5,
-      "comment": "Scooter en excelente estado y muy rapido.",
-      "image": "https://prizmastore.pe/wp-content/uploads/2023/11/Xiaomi-4-Ultra-4.jpg"
     }
   ],
-  "payments": [
+  "models": [
     {
       "id": "1",
-      "number": 123456789012,
-      "date": "2024-09-15",
-      "three_back_num": 123,
-      "user_id": "cc0b24e6-d0cc-4d62-bcc5-cc9e7172cef8"
+      "name": "M365"
     },
     {
       "id": "2",
-      "number": 987654321012,
-      "date": "2024-09-16",
-      "three_back_num": 456,
-      "user_id": "cc0b24e6-d0cc-4d62-bcc5-cc9e7172cef8"
+      "name": "Ninebot"
+    }
+  ],
+  "districts": [
+    {
+      "id": "1",
+      "name": "Miraflores"
+    }
+  ],
+  "brands": [
+    {
+      "id": "1",
+      "name": "Xiaomi"
+    },
+    {
+      "id": "2",
+      "name": "Segway"
     }
   ],
   "suscriptions": [
     {
       "id": "1",
-      "name": "Plan Mensual",
-      "description": "Plan con acceso a 7 días de la semana 100% garantizado durante 1 mes",
-      "stars": 1,
-      "price": 39
+      "number": "9876543217654321",
+      "date": "76543213",
+      "cvv": "432",
+      "typeId": "1",
+      "userId": "1"
+    },
+    {
+      "id": "7ffd",
+      "number": "8765432187654321",
+      "date": "12121212",
+      "cvv": "321",
+      "typeId": "3",
+      "userId": "dd51"
+    },
+    {
+      "id": "8b12",
+      "number": "8765432187654321",
+      "date": "65432121",
+      "cvv": "321",
+      "typeId": "1",
+      "userId": null
+    }
+  ],
+  "type_suscription": [
+    {
+      "id": "1",
+      "name": "Plan Semanal",
+      "costo": "29.90"
     },
     {
       "id": "2",
-      "name": "Plan Trimestral",
-      "description": "Plan con acceso a 90 días. Cuenta con beneficio de rentar scooter deportivos.",
-      "stars": 2,
-      "price": 99
+      "name": "Plan Mensual",
+      "costo": "79.90"
     },
     {
       "id": "3",
-      "name": "Plan Anual",
-      "description": "Plan con acceso con todos los beneficios durante 1 año.",
-      "stars": 3,
-      "price": 199
+      "name": "Plan Trimestral",
+      "costo": "109.90"
     }
   ],
-  "userSubscription": [
+  "reservations": [
     {
-      "id": "monthly",
-      "name": "subscription.plans.monthly",
-      "description": "subscription.plans.monthlyDescription",
-      "price": 39,
-      "stars": 1
+      "id": "1",
+      "cantDate": "Esta reserva es válida por 7 días (Plan Semanal).",
+      "scooterId": "1",
+      "userId": "1",
+      "suscriptionId": "1"
     },
     {
-      "id": "monthly",
-      "name": "subscription.plans.monthly",
-      "description": "subscription.plans.monthlyDescription",
-      "price": 39,
-      "stars": 1
+      "id": "1fe7",
+      "cantDate": "Esta reserva es válida por 90 días (Plan Trimestral).",
+      "scooterId": "2",
+      "userId": "dd51",
+      "suscriptionId": "7ffd"
+    },
+    {
+      "id": "e211",
+      "cantDate": "Esta reserva es válida por 90 días (Plan Trimestral).",
+      "scooterId": "1b9a",
+      "userId": "dd51",
+      "suscriptionId": "7ffd"
+    },
+    {
+      "id": "54fe",
+      "cantDate": "Esta reserva es válida por 7 días (Plan Semanal).",
+      "scooterId": "1b9a",
+      "userId": null,
+      "suscriptionId": "8b12"
+    },
+    {
+      "id": "1d85",
+      "cantDate": "Esta reserva es válida por 90 días (Plan Trimestral).",
+      "scooterId": "2",
+      "userId": "dd51",
+      "suscriptionId": "7ffd"
+    },
+    {
+      "id": "338d",
+      "cantDate": "Esta reserva es válida por 7 días (Plan Semanal).",
+      "scooterId": "1b9a",
+      "userId": "1",
+      "suscriptionId": "1"
     }
   ]
 }
