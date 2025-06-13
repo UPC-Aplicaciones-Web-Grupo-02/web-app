@@ -1,4 +1,4 @@
-import { BaseServices } from '../../../shared/BaseService.js';
+import { BaseServices } from '@/shared/BaseService.js';
 import District from '../model/district.js';
 
 export default class DistrictService {

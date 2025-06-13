@@ -1,4 +1,4 @@
-import { BaseServices } from '../../../shared/BaseService.js';
+import { BaseServices } from "@/shared/BaseService.js";
 import Scooter from '../model/scooter.js';
 
 export default class ScooterService {
@@ -11,7 +11,7 @@ export default class ScooterService {
 
     // Esta es para obtener una scooter por su ID
     static async MostrarScooterPorId(id) {
-        const response = await BaseServices.http.get(/scooters/${id});
+        const response = await BaseServices.http.get(`/scooters/${id}`);
         return new Scooter(response.data);
     }
 
@@ -21,7 +21,7 @@ export default class ScooterService {
     }
 
     static async EliminarScooter(id) {
-        const response = await BaseServices.http.delete(/scooters/${id});
+        const response = await BaseServices.http.delete(`/scooters/${id}`);
         return response.data;
     }
 }

@@ -1,4 +1,4 @@
-import { BaseServices } from '../../../shared/BaseService.js';
+import { BaseServices } from '@/shared/BaseService.js';
 import Brand from '../model/brand.js';
 
 export default class BrandService {
