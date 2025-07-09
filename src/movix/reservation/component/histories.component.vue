@@ -1,8 +1,8 @@
 <script setup>
 import { ref, onMounted } from 'vue';
-import { BaseServices } from '../../../shared/BaseService.js';
+import BaseService from "@/shared/BaseService.js";
 
-const userId = localStorage.getItem('userId');
+const userId = Number(localStorage.getItem('userId'));
 const loading = ref(true);
 const error = ref(null);
 const reservas = ref([]);
@@ -18,15 +18,17 @@ onMounted(async () => {
   }
   try {
     const [allReservas, allScooters, allSuscripciones, allTipos] = await Promise.all([
-      BaseServices.http.get('/reservations').then(r => r.data),
-      BaseServices.http.get('/scooters').then(r => r.data),
-      BaseServices.http.get('/suscriptions').then(r => r.data),
-      BaseServices.http.get('/type_suscription').then(r => r.data)
+      BaseService.http.get('/api/v1/Reservations').then(r => r.data),
+      BaseService.http.get('/api/v1/Scooter/').then(r => r.data),
+      BaseService.http.get('/api/v1/Suscriptions').then(r => r.data),
+      BaseService.http.get('/api/v1/TypeSuscriptions').then(r => r.data)
     ]);
+
     reservas.value = allReservas.filter(r => r.userId === userId);
     scooters.value = allScooters;
     suscripciones.value = allSuscripciones;
     tipos.value = allTipos;
+
   } catch (e) {
     error.value = 'Error al cargar los datos.';
   } finally {
@@ -37,9 +39,11 @@ onMounted(async () => {
 function getScooter(id) {
   return scooters.value.find(s => s.id === id) || {};
 }
+
 function getSuscripcion(id) {
   return suscripciones.value.find(s => s.id === id) || {};
 }
+
 function getTipo(id) {
   return tipos.value.find(t => t.id === id) || {};
 }
@@ -80,6 +84,7 @@ function getTipo(id) {
   min-height: 70vh;
   background: #fff;
 }
+
 .card-history {
   background: white;
   border-radius: 12px;
@@ -88,6 +93,7 @@ function getTipo(id) {
   max-width: 600px;
   width: 100%;
 }
+
 .history-item {
   display: flex;
   gap: 16px;
@@ -95,6 +101,7 @@ function getTipo(id) {
   border-bottom: 1px solid #eee;
   padding: 16px 0;
 }
+
 .text-red-600 {
   color: #b00;
 }

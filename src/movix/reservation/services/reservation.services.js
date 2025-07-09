@@ -1,15 +1,27 @@
-import { BaseServices } from '../../../shared/BaseService.js';
 import Reservation from '../model/reservation.js';
+import BaseService from "@/shared/BaseService.js";
 
 export default class reservationService {
 
-    static async MostrarReservation() {
-        const response = await BaseServices.http.get('/reservations');
-        return response.data.map(reservation => new Reservation(reservation));
+  // Obtener todas las reservaciones
+  static async MostrarReservation() {
+    try {
+      const response = await BaseService.http.get('/api/v1/Reservations');
+      return response.data.map(reservation => new Reservation(reservation));
+    } catch (error) {
+      console.error('Error al obtener reservaciones:', error);
+      throw error;
     }
+  }
 
-    static async createReservation(reservation) {
-        const response = await BaseServices.http.post('/reservations', reservation);
-        return new Reservation(response.data);
+  // Crear una nueva reservación
+  static async createReservation(reservation) {
+    try {
+      const response = await BaseService.http.post('/api/v1/Reservations', reservation);
+      return new Reservation(response.data);
+    } catch (error) {
+      console.error('Error al crear reservación:', error);
+      throw error;
     }
+  }
 }

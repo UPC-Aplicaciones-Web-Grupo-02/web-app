@@ -13,7 +13,7 @@ const nuevoUsuario = reactive({
   password: '',
   photo: '',
   address: '',
-  role_id: ''
+  roleId: ''
 });
 
 const roles = ref([]);
@@ -38,7 +38,7 @@ async function crearUsuario() {
       !nuevoUsuario.password ||
       !nuevoUsuario.photo ||
       !nuevoUsuario.address ||
-      !nuevoUsuario.role_id
+      !nuevoUsuario.roleId
   ) {
     error.value = 'Todos los campos son obligatorios.';
     return;
@@ -137,7 +137,7 @@ async function crearUsuario() {
         <div>
           <pv-floatlabel class="w-full" variant="on">
             <pv-select
-                v-model="nuevoUsuario.role_id"
+                v-model="nuevoUsuario.roleId"
                 inputId="role_select"
                 :options="roles"
                 optionLabel="role"

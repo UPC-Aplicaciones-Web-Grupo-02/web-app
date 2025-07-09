@@ -1,37 +1,47 @@
 import User from '../model/user.js';
 import Roles from '../model/role.js';
-import { BaseServices } from "../../../shared/BaseService.js";
+import BaseService from "@/shared/BaseService.js";
 
 export class UserService {
-    async signIn(email, password) {
-        const response = await BaseServices.http.get(`/users`, {
-            params: { email, password }
-        });
-        return response.data.map(user => new User(user));
-    }
+  // Iniciar sesión
+  async signIn(email, password) {
+    const response = await BaseService.http.post(`/api/v1/Users/login`, {
+      email,
+      password
+    });
 
-    async getUserById(id) {
-        const response = await BaseServices.http.get(`/users/${id}`);
-        return new User(response.data);
-    }
+    return {
+      token: response.data.token,
+      user: new User(response.data)
+    };
+  }
 
-    async signUp(user) {
-        const response = await BaseServices.http.post("/users", user);
-        return new User(response.data);
-    }
+  // Obtener usuario por ID
+  async getUserById(id) {
+    const response = await BaseService.http.get(`/api/v1/Users/${id}`);
+    return new User(response.data);
+  }
 
-    async editUser(id, user) {
-        const response = await BaseServices.http.put(`/users/${id}`, user);
-        return new User(response.data);
-    }
+  // Registrar usuario
+  async signUp(user) {
+    const response = await BaseService.http.post("/api/v1/Users", user);
+    return new User(response.data);
+  }
 
-    async deleteUser(id) {
-        return await BaseServices.http.delete(`/users/${id}`);
-    }
+  // Editar usuario
+  async editUser(id, user) {
+    const response = await BaseService.http.put(`/api/v1/Users/${id}`, user);
+    return new User(response.data);
+  }
 
-    // Método para obtener roles
-    async getRoles() {
-        const response = await BaseServices.http.get('/user_roles');
-        return response.data.map(role => new Roles(role));
-    }
+  // Eliminar usuario
+  async deleteUser(id) {
+    return await BaseService.http.delete(`/api/v1/Users/${id}`);
+  }
+
+  // Obtener todos los roles
+  async getRoles() {
+    const response = await BaseService.http.get('/api/v1/UserRoles');
+    return response.data.map(role => new Roles(role));
+  }
 }

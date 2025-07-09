@@ -1,27 +1,49 @@
-import { BaseServices } from "@/shared/BaseService.js";
 import Scooter from '../model/scooter.js';
+import BaseService from "@/shared/BaseService.js";
 
 export default class ScooterService {
 
-    // Esta es para obtener la lista de personas
-    static async MostrarScooter() {
-        const response = await BaseServices.http.get('/scooters');
-        return response.data.map(scooter => new Scooter(scooter));
+  // Obtener todos los scooters
+  static async MostrarScooter() {
+    try {
+      const response = await BaseService.http.get('/api/v1/Scooter');
+      return response.data.map(scooter => new Scooter(scooter));
+    } catch (error) {
+      console.error('Error al obtener scooters:', error);
+      throw error;
     }
+  }
 
-    // Esta es para obtener una scooter por su ID
-    static async MostrarScooterPorId(id) {
-        const response = await BaseServices.http.get(`/scooters/${id}`);
-        return new Scooter(response.data);
+  // Obtener scooter por ID
+  static async MostrarScooterPorId(id) {
+    try {
+      const response = await BaseService.http.get(`/api/v1/Scooter/${id}`);
+      return new Scooter(response.data);
+    } catch (error) {
+      console.error('Error al obtener scooter por ID:', error);
+      throw error;
     }
+  }
 
-    static async CrearScooter(scooter) {
-        const response = await BaseServices.http.post('/scooters', scooter);
-        return new Scooter(response.data);
+  // Crear scooter
+  static async CrearScooter(scooter) {
+    try {
+      const response = await BaseService.http.post('/api/v1/Scooter', scooter);
+      return new Scooter(response.data);
+    } catch (error) {
+      console.error('Error al crear scooter:', error);
+      throw error;
     }
+  }
 
-    static async EliminarScooter(id) {
-        const response = await BaseServices.http.delete(`/scooters/${id}`);
-        return response.data;
+  // Eliminar scooter
+  static async EliminarScooter(id) {
+    try {
+      const response = await BaseService.http.delete(`/api/v1/Scooter/${id}`);
+      return response.data;
+    } catch (error) {
+      console.error('Error al eliminar scooter:', error);
+      throw error;
     }
+  }
 }

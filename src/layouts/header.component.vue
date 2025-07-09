@@ -3,7 +3,7 @@
     <pv-toolbar style="border-radius: 0rem; padding: 1rem 1rem 1rem 1.5rem; background-color: #ffffff; border: 0px">
       <template #start>
         <div class="flex items-center gap-2">
-          <img src="https://i.ibb.co/fYLGJVK/Logo-Movi.jpg" alt="Logo del MoviRent" style="height: 80px"/>
+          <img src="https://i.ibb.co/fYLGJVK/Logo-Movi.jpg" alt="Logo del MoviRent" style="height: 80px" />
         </div>
         <select @change="changeLanguage($event)" class="language-selector"
                 style="margin-left: 50px; background-color: white; color: #222222; padding: 5px; border-radius: 5px"
@@ -12,12 +12,12 @@
           <option value="en">English</option>
         </select>
         <div v-if="userId" style="margin-left: 20px">
-        <span>Rol:
-          <template v-if="userRole === '1'">Administrador</template>
-          <template v-else-if="userRole === '2'">Usuario</template>
-          <template v-else-if="userRole === '3'">Universitario</template>
-          <template v-else>Desconocido</template>
-        </span>
+          <span>Rol:
+            <template v-if="userRole === '1'">Administrador</template>
+            <template v-else-if="userRole === '2'">Usuario</template>
+            <template v-else-if="userRole === '3'">Universitario</template>
+            <template v-else>Desconocido</template>
+          </span>
         </div>
       </template>
 
@@ -31,33 +31,37 @@
               <pv-button :label="$t('buttons.profile')" icon="pi pi-user"
                          style="background-color: white; color: black; border: none"/>
             </router-link>
+
             <router-link
-                v-if="userRole !== '1'"
-                to="/suscription"
-                class="pv-btn"
-                aria-label="Suscripción"
+              v-if="userRole !== '1'"
+              to="/suscription"
+              class="pv-btn"
+              aria-label="Suscripción"
             >
               <pv-button :label="$t('buttons.subscription')" icon="pi pi-credit-card"
                          style="background-color: white; color: black; border: none"/>
             </router-link>
+
             <router-link
-                v-if="userRole === '1'"
-                to="/admin/list"
-                class="pv-btn"
-                aria-label="Scooter Admin"
+              v-if="userRole === '1'"
+              to="/admin/list"
+              class="pv-btn"
+              aria-label="Scooter Admin"
             >
               <pv-button :label="$t('buttons.scooter')" icon="pi pi-shop"
                          style="background-color: white; color: black; border: none"/>
             </router-link>
+
             <router-link
-                v-else
-                to="/scooter"
-                class="pv-btn"
-                aria-label="Scooter"
+              v-else
+              to="/scooter"
+              class="pv-btn"
+              aria-label="Scooter"
             >
               <pv-button :label="$t('buttons.scooter')" icon="pi pi-shop"
                          style="background-color: white; color: black; border: none"/>
             </router-link>
+
             <router-link to="/login" @click="logout" class="pv-btn" aria-label="Logout">
               <pv-button :label="$t('buttons.logout')" style="background-color: white; color: black; border: none"/>
             </router-link>
@@ -67,6 +71,39 @@
     </pv-toolbar>
   </div>
 </template>
+
+<script setup>
+import { onMounted, ref } from "vue";
+import { useI18n } from "vue-i18n";
+import router from "../router/router.js";
+
+const { locale } = useI18n();
+const isMenuOpen = ref(false);
+
+const userId = ref('');
+const userRole = ref('');
+
+onMounted(() => {
+  userId.value = localStorage.getItem('userId') || '';
+  userRole.value = localStorage.getItem('userRole') || '';
+});
+
+function changeLanguage(event) {
+  locale.value = event.target.value;
+}
+
+function toggleMenu() {
+  isMenuOpen.value = !isMenuOpen.value;
+}
+
+function logout() {
+  sessionStorage.removeItem('user');
+  localStorage.removeItem('userId');
+  localStorage.removeItem('userRole');
+  localStorage.removeItem('token');
+  router.push('/login');
+}
+</script>
 
 <style scoped>
 .pv-btn {
@@ -129,35 +166,3 @@
   }
 }
 </style>
-
-<script setup>
-import {onMounted, ref} from "vue";
-import {useI18n} from "vue-i18n";
-import router from "../router/router.js";
-
-const {locale} = useI18n();
-const isMenuOpen = ref(false);
-
-function changeLanguage(event) {
-  locale.value = event.target.value;
-}
-
-const userId = ref('');
-const userRole = ref('');
-
-onMounted(() => {
-  userId.value = localStorage.getItem('userId') || '';
-  userRole.value = localStorage.getItem('userRole') || '';
-});
-
-function toggleMenu() {
-  isMenuOpen.value = !isMenuOpen.value;
-}
-
-const logout = () => {
-  sessionStorage.removeItem('user');
-  localStorage.removeItem('userId');
-  localStorage.removeItem('userRole');
-  router.push('/login');
-}
-</script>

@@ -1,7 +1,7 @@
 <script setup>
 import {ref, onMounted, computed} from 'vue';
 import SuscriptionService from '../services/type.service.js';
-import {BaseServices} from '../../../shared/BaseService.js';
+import BaseService from "@/shared/BaseService.js";
 
 const userId = localStorage.getItem('userId');
 const suscriptions = ref([]);
@@ -11,9 +11,8 @@ const userSuscription = ref(null);
 onMounted(async () => {
   try {
     suscriptions.value = await SuscriptionService.MostrarSuscription();
-    // Buscar la suscripción del usuario
-    const allUserSuscriptions = await BaseServices.http.get('/suscriptions').then(r => r.data);
-    userSuscription.value = allUserSuscriptions.find(s => s.userId == userId);
+    userSuscription.value = await BaseService.http.get('/api/v1/Suscriptions/me').then(r => r.data);
+    console.log("ID actual:", userId);
   } catch (error) {
     console.error('Error al cargar datos:', error);
   } finally {

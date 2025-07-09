@@ -1,6 +1,20 @@
-import axios from 'axios';
-export class BaseServices {
-    static http = axios.create({
-        baseURL: import.meta.env.VITE_API_BASE_URL
-    })
-}
+import axios from "axios";
+
+const BaseServices = axios.create({
+  baseURL: import.meta.env.VITE_API_BASE_URL,
+  headers: {
+    'Content-Type': 'application/json'
+  }
+});
+
+BaseServices.interceptors.request.use(config => {
+  const token = localStorage.getItem('token');
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+});
+
+export default {
+  http: BaseServices
+};

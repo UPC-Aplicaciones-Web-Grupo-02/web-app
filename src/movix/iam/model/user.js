@@ -1,5 +1,5 @@
 export default class User {
-    constructor({ id, name, phone, dni, email, password, photo, address, role_id }) {
+    constructor({ id, name, phone, dni, email, password, photo, address, roleId }) {
         this.id = id;
         this.name = name;
         this.phone = phone;
@@ -8,6 +8,6 @@ export default class User {
         this.password = password;
         this.photo = photo;
         this.address = address;
-        this.role_id = role_id;
+        this.role_id = roleId;
     }
 }
